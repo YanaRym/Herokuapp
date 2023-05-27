@@ -1,8 +1,10 @@
 package tests;
 
 
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.InputsPage;
+import utilities.TestDataGenerator;
 
 
 public class InputsClassicalPomTest extends BaseTest {
@@ -14,10 +16,17 @@ public class InputsClassicalPomTest extends BaseTest {
         inputPage.inputNegativeNumber();
     }
 
-    @Test
-    public void inputPositiveTest() {
+    @Test(dataProvider = "testData")
+    public void inputPositiveTest(int randomNumber) {
         InputsPage inputPage = new InputsPage(driver);
         inputPage.openInputsPage();
-        inputPage.inputPositiveNumber();
+        inputPage.inputPositiveNumber(randomNumber);
+    }
+
+    @DataProvider(name = "testData")
+    public Object[][] inputForTask() {
+        return new Object[][]{
+                {TestDataGenerator.getRandomNumber(),}
+        };
     }
 }

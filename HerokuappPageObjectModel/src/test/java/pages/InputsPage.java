@@ -28,10 +28,9 @@ public class InputsPage extends BasePage {
         }
     }
 
-    public void inputPositiveNumber() {
+    public void inputPositiveNumber(int randomNumber) {
         WebElement inputsField = driver.findElement(INPUT_FIELD);
-        int number = TestDataGenerator.getRandomNumber();
-        for (int i = 0; i < number; i++) {
+        for (int i = 0; i < randomNumber; i++) {
             inputsField.sendKeys(Keys.ARROW_UP);
         }
     }

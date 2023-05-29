@@ -1,5 +1,6 @@
 package tests;
 
+import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CheckboxesPage;
@@ -8,6 +9,7 @@ import pages.CheckboxesPage;
 public class CheckboxesClassicalPomTest extends BaseTest {
 
     @Test
+    @Description("Box one is unchecked")
     public void checkBox1UncheckedTest() {
         CheckboxesPage checkboxesPage = new CheckboxesPage(driver);
         checkboxesPage.openCheckboxesPage();
@@ -15,6 +17,7 @@ public class CheckboxesClassicalPomTest extends BaseTest {
     }
 
     @Test
+    @Description("Box one is checked")
     public void checkBox1CheckedTest() {
         CheckboxesPage checkboxesPage = new CheckboxesPage(driver);
         checkboxesPage.openCheckboxesPage();
@@ -23,6 +26,7 @@ public class CheckboxesClassicalPomTest extends BaseTest {
     }
 
     @Test
+    @Description("Box two is checked")
     public void checkBox2CheckedTest() {
         CheckboxesPage checkboxesPage = new CheckboxesPage(driver);
         checkboxesPage.openCheckboxesPage();
@@ -30,6 +34,7 @@ public class CheckboxesClassicalPomTest extends BaseTest {
     }
 
     @Test
+    @Description("Box two is unchecked")
     public void checkbox2UncheckedTest() {
         CheckboxesPage checkboxesPage = new CheckboxesPage(driver);
         checkboxesPage.openCheckboxesPage();

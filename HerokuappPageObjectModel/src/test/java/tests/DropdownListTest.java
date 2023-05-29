@@ -1,5 +1,6 @@
 package tests;
 
+import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DropdownListPage;
@@ -10,6 +11,7 @@ import static constants.PagesInfo.OPTION_TWO_TEXT;
 public class DropdownListTest extends BaseTest {
 
     @Test
+    @Description("Select option one")
     public void optionOneSelectTest() {
         DropdownListPage dropdownList = new DropdownListPage(driver);
         dropdownList.openDropdownPage();
@@ -18,6 +20,7 @@ public class DropdownListTest extends BaseTest {
     }
 
     @Test
+    @Description("Select option two")
     public void optionTwoSelectTest() {
         DropdownListPage dropdownList = new DropdownListPage(driver);
         dropdownList.openDropdownPage();

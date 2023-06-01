@@ -1,19 +1,17 @@
-package tests;
+package tests.withSteps;
 
-import jdk.jfr.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.TyposPage;
+import steps.TyposSteps;
+import tests.BaseTest;
 
-
-public class TyposClassicalPomTest extends BaseTest {
+public class TyposWithStepsTest extends BaseTest {
 
     @Test
-    @Description("The sentence is correct")
-    public void typosTest() {
+    public void hasTypos() {
+        TyposSteps.hasTypo(driver);
         TyposPage typosPage = new TyposPage(driver);
-        typosPage.openTyposPage();
         Assert.assertTrue(typosPage.textHasTypo(typosPage.getText()), "The sentence contains a typo.");
     }
-
 }

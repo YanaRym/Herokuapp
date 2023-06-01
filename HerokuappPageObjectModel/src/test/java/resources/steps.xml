@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Steps Test" thread-count="1" parallel="classes">
+    <listeners>
+        <listener class-name="utilities.AnnotationTransformer"/>
+    </listeners>
+    <parameter name="browser" value="chrome"/>
+    <test name="Steps Herokuapp Test">
+        <classes>
+            <class name="tests.withSteps.CheckboxesWithStepsTest"/>
+            <class name="tests.withSteps.DropdownListWithStepsTest"/>
+            <class name="tests.withSteps.DroppableWithStepsTest"/>
+            <class name="tests.withSteps.FileUploadWithStepsTest"/>
+            <class name="tests.withSteps.InputsWithStepsTest"/>
+            <class name="tests.withSteps.NotificationMessageWithStepsTest"/>
+            <class name="tests.withSteps.SortableDataTablesWithStepsTest"/>
+            <class name="tests.withSteps.TyposWithStepsTest"/>
+        </classes>
+    </test>
+</suite>
